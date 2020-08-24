@@ -74,4 +74,4 @@ function stopThread() {
   //TODO: call set interval
   thread_interval = setInterval(foo, 0.1 * 1000);
 }
-//var thread_interval = setInterval(foo, 0.1 * 1000);
+var thread_interval = setInterval(foo, 0.1 * 1000);
