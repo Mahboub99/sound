@@ -1,19 +1,15 @@
 var recorder, soundFile, mic, pause_flag, amplitute, one_pause;
 var list_pause = new Array();
 
-recorder = new p5.SoundRecorder();
-soundFile = new p5.SoundFile();
-mic = new p5.AudioIn();
-// users must manually enable their browser microphone for recording to work properly!
-mic.start();
-console.log(mic.getLevel);
-
 function setup() {
   // # Setting up the recording configurations
   recorder = new p5.SoundRecorder();
   soundFile = new p5.SoundFile();
 
   // create an audio in
+  let cnv = createCanvas(100, 100);
+  cnv.mousePressed(userStartAudio);
+
   mic = new p5.AudioIn();
 
   // users must manually enable their browser microphone for recording to work properly!
@@ -40,6 +36,9 @@ function foo() {
 
   console.log("\n\nfoo running in the thread\n");
   console.log("Flag = ", pause_flag);
+  background(0);
+  fill(255);
+  text("tap to start", width / 2, 20);
   amplitute = mic.getLevel() ** 2 * 10000;
   console.log(amplitute);
 
