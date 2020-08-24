@@ -14,7 +14,7 @@ function setup() {
   cnv.style("font-size", "24px");
   cnv.style("font-weight", 700);
   cnv.style("cursor", "pointer");
-  onmouseover(cnv.style("translate", "scale(1.2)"));
+  //onmouseover(cnv.style("translate", "scale(1.2)"));
   text("Start", 10, 15);
 
   mic = new p5.AudioIn();
