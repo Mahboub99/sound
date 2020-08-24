@@ -1,6 +1,12 @@
 var recorder, soundFile, mic, pause_flag, amplitute, one_pause;
 var list_pause = new Array();
 
+recorder = new p5.SoundRecorder();
+soundFile = new p5.SoundFile();
+mic = new p5.AudioIn();
+// users must manually enable their browser microphone for recording to work properly!
+mic.start();
+
 function setup() {
   // # Setting up the recording configurations
   recorder = new p5.SoundRecorder();
