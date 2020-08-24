@@ -17,6 +17,9 @@ function setup() {
   //onmouseover(cnv.style("translate", "scale(1.2)"));
   text("Start", 10, 15);
 
+  if (mouseX > 0 && mouseX < 50 && mouseY > 0 && mouseY < 25) {
+    cnv.style(" transform", "scale(1.2)");
+  }
   mic = new p5.AudioIn();
 
   // users must manually enable their browser microphone for recording to work properly!
