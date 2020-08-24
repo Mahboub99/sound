@@ -7,9 +7,12 @@ function setup() {
   soundFile = new p5.SoundFile();
 
   // create an audio in
-  let cnv = createCanvas(100, 100);
+  let cnv = createCanvas(100, 50);
   cnv.mousePressed(userStartAudio);
-  cnv.style("background", "red");
+  cnv.style("background", "gray");
+  cnv.style("text-align", "center");
+  cnv.style("padding", "5px 10px");
+  cnv.text("Start");
   mic = new p5.AudioIn();
 
   // users must manually enable their browser microphone for recording to work properly!
@@ -36,7 +39,7 @@ function foo() {
 
   console.log("\n\nfoo running in the thread\n");
   console.log("Flag = ", pause_flag);
-  background(0);
+
   fill(255);
   text("tap to start");
   amplitute = mic.getLevel() ** 2 * 10000;
