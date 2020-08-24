@@ -12,7 +12,7 @@ function setup() {
   cnv.style("background", "gray");
   cnv.style("text-align", "center");
   cnv.style("padding", "5px 10px");
-  text("Start");
+  text("Start", 10, 20);
   mic = new p5.AudioIn();
 
   // users must manually enable their browser microphone for recording to work properly!
