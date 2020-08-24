@@ -6,6 +6,7 @@ soundFile = new p5.SoundFile();
 mic = new p5.AudioIn();
 // users must manually enable their browser microphone for recording to work properly!
 mic.start();
+console.log(mic.getLevel);
 
 function setup() {
   // # Setting up the recording configurations
@@ -73,4 +74,4 @@ function stopThread() {
   //TODO: call set interval
   thread_interval = setInterval(foo, 0.1 * 1000);
 }
-var thread_interval = setInterval(foo, 0.1 * 1000);
+//var thread_interval = setInterval(foo, 0.1 * 1000);
