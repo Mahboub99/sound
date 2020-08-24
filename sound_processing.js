@@ -40,7 +40,7 @@ function foo() {
 
   console.log("\n\nfoo running in the thread\n");
   console.log("Flag = ", pause_flag);
-  amplitute = mic.getLevel() ** 2 * 10000;
+  amplitute = mic.getLevel() * 2 * 10000;
   console.log(amplitute);
 
   if (amplitute < 1) {
