@@ -7,14 +7,14 @@ function setup() {
   soundFile = new p5.SoundFile();
 
   // create an audio in
-  let cnv = createCanvas(100, 50);
+  let cnv = createCanvas(50, 25);
   cnv.mousePressed(userStartAudio);
   cnv.style("background", "gray");
   cnv.style("text-align", "center");
   cnv.style("padding", "5px 10px");
   cnv.style("font-size", "24px");
   cnv.style("font-weight", 700);
-  text("Start", 10, 25);
+  text("Start", 10, 13);
 
   mic = new p5.AudioIn();
 
